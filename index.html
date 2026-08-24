@@ -1670,22 +1670,7 @@ function buildSidebar(){
     opContent.appendChild(oItem);
   }
   nav.appendChild(opContent);
-  var _d=document.createElement('div');_d.className='sidebar-section-divider';nav.appendChild(_d);
-
-  // === Section 6: Organisatorisches ===
-  var orgMods=[['klinikablaeufe','Klinikabläufe'],['fortbildungen','Interne Fortbildungen'],['savethedate','Veranstaltungen'],['telefonnummern','Wichtige Telefonnummern'],['urlaubsplaner','Dienst-/Urlaubsplaner']];
-  var orgLabel=mkSection('org','Organisatorisches','Telefon, Urlaub, Fortbildung',orgMods.length);
-  nav.appendChild(orgLabel);
-  var orgContent=document.createElement('div');orgContent.className='sidebar-section-content';orgContent.setAttribute('data-section','org');
-  orgLabel.onclick=function(){toggleSidebarSection(orgLabel,orgContent);};
-  for(var oi=0;oi<orgMods.length;oi++){
-    var oItem=document.createElement('div');oItem.className='nav-std-item nav-mod-item';
-    oItem.setAttribute('data-mod-id',orgMods[oi][0]);
-    oItem.innerHTML='<span class="std-dot" style="background:#1e40af;"></span>'+orgMods[oi][1];
-    oItem.onclick=(function(id){return function(e){e.stopPropagation();showModule(id);};})(orgMods[oi][0]);
-    orgContent.appendChild(oItem);
-  }
-  nav.appendChild(orgContent);
+  // Section 6: Organisatorisches — in GitHub-Version entfernt
 
 
 }
@@ -1880,8 +1865,7 @@ function buildWelcome(){
     ['Scores','#3182ce','showCalculator(\x27asa\x27)','M4 4h16v16H4zM9 9h.01M15 9h.01M9 15h.01M15 15h.01'],
     ['Antibiosen','#7c3aed','showModule(\x27antibiosen\x27)','M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'],
     ['PAP','#b8860b','showStandard(\x27pap\x27)','M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'],
-    ['Telefon','#1e40af','showModule(\x27telefonnummern\x27)','M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z'],
-    ['Urlaubsplan','#059669','showModule(\x27urlaubsplaner\x27)','M12 12m-5 0a5 5 0 1010 0 5 5 0 10-10 0M12 1v2m0 18v2m-7.78-3.22l1.42-1.42m12.72-12.72l1.42-1.42M1 12h2m18 0h2m-3.22 7.78l-1.42-1.42M5.64 5.64L4.22 4.22']
+    ['Telefon','#1e40af','showModule(\x27telefonnummern\x27)','M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z']
   ];
   for (var qi = 0; qi < qItems.length; qi++) {
     var q = qItems[qi];
