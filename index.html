@@ -2,9 +2,22 @@
 <html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+<script>
+// Auto-Aktualisierung: Seite neu laden bei Tab-/App-Wechsel (Safari iOS)
+(function(){
+  var lastVisible = Date.now();
+  window.addEventListener('pageshow', function(e){
+    if(e.persisted) location.reload();
+  });
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden){
+      if(Date.now() - lastVisible > 300000) location.reload();
+    } else {
+      lastVisible = Date.now();
+    }
+  });
+})();
+</script>
 <title>SurgBoard – Allgemein- &amp; Viszeralchirurgie · Helios Klinikum Erfurt</title>
 
 
